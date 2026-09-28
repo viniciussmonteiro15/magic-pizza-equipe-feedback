@@ -1,0 +1,24 @@
+.team-panel__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.team-panel__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.team-panel__notice {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--c-ok-tint);
+  border: 1px solid var(--c-ok);
+  color: var(--c-ok);
+  font-size: var(--fs-sm);
+}

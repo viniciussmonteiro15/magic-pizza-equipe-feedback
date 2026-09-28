@@ -1,0 +1,14 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--c-line-soft);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-block: 1.5rem;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}

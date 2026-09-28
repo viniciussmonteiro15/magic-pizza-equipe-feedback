@@ -1,0 +1,22 @@
+.empty-state {
+  padding: clamp(2rem, 6vw, 3rem) 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--c-line);
+  border-radius: var(--radius-md);
+  color: var(--c-muted);
+}
+
+.empty-state__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--c-text);
+}
+
+.empty-state__desc {
+  margin-top: 0.4rem;
+  font-size: var(--fs-sm);
+}
+
+.empty-state > .btn {
+  margin-top: 1.25rem;
+}

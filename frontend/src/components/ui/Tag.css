@@ -1,0 +1,40 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tag--neutral {
+  background: var(--c-raised);
+  color: var(--c-muted);
+  border-color: var(--c-line);
+}
+
+.tag--brass {
+  background: var(--c-brass-tint);
+  color: var(--c-brass-hi);
+  border-color: var(--c-brass-lo);
+}
+
+.tag--ok {
+  background: var(--c-ok-tint);
+  color: var(--c-ok);
+  border-color: var(--c-ok);
+}
+
+.tag--info {
+  background: var(--c-info-tint);
+  color: var(--c-info);
+  border-color: var(--c-info);
+}
+
+.tag--danger {
+  background: var(--c-danger-tint);
+  color: var(--c-danger);
+  border-color: var(--c-danger);
+}

@@ -1,0 +1,99 @@
+.grid-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--c-line-soft);
+  border-radius: var(--radius-md);
+  background: var(--c-surface);
+}
+
+.avail-grid {
+  width: 100%;
+  min-width: 52rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--fs-sm);
+}
+
+.avail-grid th,
+.avail-grid td {
+  padding: 0.75rem 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid var(--c-line-soft);
+  vertical-align: middle;
+}
+
+.avail-grid thead th {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--c-muted);
+  background: var(--c-raised);
+  text-transform: capitalize;
+}
+
+.avail-grid abbr {
+  text-decoration: none;
+}
+
+/* Coluna de nomes fixa ao rolar na horizontal (celular). */
+.avail-grid__person-col {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 10.5rem;
+  text-align: left !important;
+  background: var(--c-surface);
+  border-right: 1px solid var(--c-line-soft);
+  font-weight: 400;
+}
+
+.avail-grid thead .avail-grid__person-col {
+  background: var(--c-raised);
+}
+
+.avail-grid__name {
+  display: block;
+  font-weight: 600;
+}
+
+.avail-grid__role {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}
+
+.avail-grid__off {
+  color: var(--c-line);
+}
+
+.avail-grid td.is-on {
+  background: var(--c-brass-tint);
+}
+
+.avail-grid__slot {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--c-brass-lo);
+  color: var(--c-brass-hi);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.avail-grid tfoot .avail-grid__person-col,
+.avail-grid tfoot td {
+  border-bottom: none;
+  background: var(--c-raised);
+}
+
+.avail-grid__coverage {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}
+
+.avail-grid tfoot tr {
+  display: table-row;
+}

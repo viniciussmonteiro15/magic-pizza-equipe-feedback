@@ -1,0 +1,56 @@
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.stars__item {
+  display: inline-flex;
+}
+
+.stars__input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.stars__star {
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--c-line);
+  padding: 0.1rem;
+  transition: color 0.12s ease, transform 0.12s ease;
+}
+
+.stars--sm .stars__star {
+  font-size: 1.05rem;
+}
+
+.stars__input:checked ~ .stars__star,
+.stars__item:has(.stars__input:checked) ~ .stars__item .stars__star {
+  color: var(--c-line);
+}
+
+/* Preenche a estrela atual e todas as anteriores. */
+.stars__item:has(.stars__input:checked) .stars__star,
+.stars__item:has(~ .stars__item .stars__input:checked) .stars__star {
+  color: var(--c-brass);
+}
+
+.stars__input:focus-visible ~ .stars__star {
+  outline: 2px solid var(--c-brass-hi);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.stars__star:hover {
+  transform: translateY(-1px);
+}
+
+.stars__caption {
+  margin-left: 0.5rem;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}

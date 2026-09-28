@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Tokens de design — Magic Pizza
+   Ardósia + latão. Altere aqui para mudar a identidade do sistema inteiro.
+   ========================================================================== */
+:root {
+  color-scheme: dark;
+
+  /* Superfícies (do fundo para a frente) */
+  --c-bg: #1a222d;
+  --c-surface: #212b38;
+  --c-raised: #2a3646;
+  --c-line: #3d4b60;
+  --c-line-soft: #303d4f;
+
+  /* Texto */
+  --c-text: #ede9e0;
+  --c-muted: #a9b3c1;
+
+  /* Latão: o único acento da interface */
+  --c-brass: #c9a265;
+  --c-brass-hi: #ddbe86;
+  --c-brass-lo: #8e6b36;
+  --c-on-brass: #1a222d;
+  --c-brass-tint: rgba(201, 162, 101, 0.08);
+
+  /* Estados */
+  --c-danger: #eb9f91;
+  --c-danger-tint: rgba(235, 159, 145, 0.12);
+  --c-ok: #8fcaa9;
+  --c-ok-tint: rgba(143, 202, 169, 0.12);
+  --c-info: #93b7de;
+  --c-info-tint: rgba(147, 183, 222, 0.12);
+
+  /* Tipografia */
+  --font-display: 'Marcellus', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.625rem;
+
+  /* Raios: campos < cartões < diálogos */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --gutter: clamp(1rem, 4vw, 2rem);
+
+  --shadow-float: 0 24px 64px rgba(6, 10, 16, 0.55);
+}

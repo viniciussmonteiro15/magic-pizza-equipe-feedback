@@ -1,0 +1,233 @@
+.availability {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.availability__summary {
+  display: flex;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--c-line-soft);
+}
+
+.availability__summary-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem);
+  color: var(--c-brass-hi);
+}
+
+.availability__summary-label {
+  margin-top: 0.15rem;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}
+
+/* ---------- Linha do tempo semanal ---------- */
+.availability__timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.availability__timeline-row,
+.availability__timeline-scale {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.availability__timeline-label {
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+  text-transform: capitalize;
+}
+
+.availability__timeline-track {
+  position: relative;
+  height: 1.15rem;
+  background: var(--c-raised);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.availability__timeline-bar {
+  position: absolute;
+  inset-block: 0;
+  background: linear-gradient(90deg, var(--c-brass-lo), var(--c-brass));
+  border-radius: 999px;
+}
+
+.availability__timeline-scale {
+  margin-top: 0.2rem;
+}
+
+.availability__timeline-scale .availability__timeline-track {
+  height: auto;
+  background: none;
+  border-radius: 0;
+}
+
+.availability__timeline-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.6875rem;
+  color: var(--c-muted);
+}
+
+/* ---------- Lista de dias ---------- */
+.availability__days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.day-row {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--c-line-soft);
+  border-radius: var(--radius-sm);
+  background: var(--c-bg);
+  transition: border-color 0.15s ease;
+}
+
+.day-row.is-active {
+  border-color: var(--c-brass-lo);
+}
+
+.day-row__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.day-row__switch {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.day-row__switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.day-row__track {
+  position: relative;
+  width: 2.5rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  background: var(--c-line);
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.day-row__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--c-text);
+  transition: transform 0.15s ease;
+}
+
+.day-row__switch input:checked ~ .day-row__track {
+  background: var(--c-brass);
+}
+.day-row__switch input:checked ~ .day-row__track .day-row__thumb {
+  transform: translateX(1.05rem);
+  background: var(--c-on-brass);
+}
+
+.day-row__switch input:focus-visible ~ .day-row__track {
+  outline: 2px solid var(--c-brass-hi);
+  outline-offset: 2px;
+}
+
+.day-row__day-label {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+.day-row__presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.preset-chip {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--c-line);
+  background: transparent;
+  color: var(--c-muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.preset-chip:hover {
+  border-color: var(--c-brass-lo);
+  color: var(--c-text);
+}
+
+.preset-chip.is-selected {
+  background: var(--c-brass-tint);
+  border-color: var(--c-brass);
+  color: var(--c-brass-hi);
+}
+
+.day-row__times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--c-line-soft);
+}
+
+.day-row__time-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}
+
+.day-row__time-field .input {
+  width: auto;
+}
+
+.availability__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.availability__status {
+  font-size: var(--fs-xs);
+  color: var(--c-ok);
+}
+
+@media (max-width: 640px) {
+  .availability__timeline-row,
+  .availability__timeline-scale {
+    grid-template-columns: 1.9rem 1fr;
+  }
+}
